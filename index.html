@@ -1,0 +1,197 @@
+<!doctype html>
+<html>	
+<!-- 
+this code is written by pixia1234
+copyright SHSSIP
+contact: qq:2253982911
+ -->
+<head>
+<meta charset="utf-8">
+<link href="used.css" type="text/css" rel="stylesheet">
+<link href="buttons.css" type="text/css" rel="stylesheet">
+<link href="swiper-bundle.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="used.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<title>碳足迹计算器</title>
+</head>
+<body>
+<div align="center" class="all">
+<h1 class="button button-large button-rounded button-highlight" onClick="caidan()"><em>碳足迹计算器 </em></h1>
+<br>
+	<div class="main">
+		<div class="main_top" id="top">
+			这是一个碳足迹计算器的主页面……
+		</div>
+		<div class="main_contest" id="contest">
+		  <form onSubmit="return calculate();">
+			<p>
+				第一问：你一个月大约用多少草稿纸？（换算成A4纸）<span class="asterisk" >*</span>
+			  <input required="true" type="number" name="ask1" id="ask1" placeholder="100" min= "0" class="inputtext">（张）
+				</p> 
+			<p> 第二问：你的考试频率大约为？（按一套试卷为一次）<span class="asterisk" >*</span></p>
+			<p>
+			    <label style="margin-left: 40px;">
+			      <input required="true" type="radio" name="ask2" value="14" id="ask2_0">
+			      一天一次</label>
+			    <label style="margin-left: 40px;">
+			      <input required="true" type="radio" name="ask2" value="6" id="ask2_1">
+			      一周三次</label>
+			    <br>
+			    <label style="margin-left: 40px;">
+			      <input required="true" type="radio" name="ask2" value="2" id="ask2_2">
+			      一周一次</label>
+		    </p>
+			<p>第三问：你做到了一下哪些绿色习惯呢？<span class="asterisk" >*</span><br>
+			  <label>
+			    <input required="true" type="checkbox" name="ask3" value="1" id="ask3_0" style="margin-left: 40px;">
+			    使用节能灯泡</label>
+			  <br>
+			  <label>
+			    <input required="true" type="checkbox" name="ask3" value="2" id="ask3_1" style="margin-left: 40px;">
+			    随手关灯</label>
+			  <br>
+			  <label>
+			    <input required="true" type="checkbox" name="ask3" value="3" id="ask3_2" style="margin-left: 40px;">
+			    随手关闭电器</label>
+			  <br>
+			  <label>
+			    <input required="true" type="checkbox" name="ask3" value="4" id="ask3_3" style="margin-left: 40px;">
+			    循环使用部分废旧物品</label>
+			  <br>
+			  <label>
+			    <input required="true" type="checkbox" name="ask3" value="5" id="ask3_4" style="margin-left: 40px;">
+			    使用太阳能热水器</label>
+			  <br>
+            </p>
+			<p>第四问：请问平均每周会有多少件快递？<span class="asterisk" >*</span><br>
+				<p>
+			    <label style="margin-left: 40px;">
+			      <input required="true" type="radio" name="ask4" value="7" id="ask4_0">
+			      一天一件</label>
+			    <label style="margin-left: 40px;">
+			      <input required="true" type="radio" name="ask4" value="3" id="ask4_1">
+			      一周三件</label>
+			    <br>
+			    <label style="margin-left: 40px;">
+			      <input required="true" type="radio" name="ask4" value="1" id="ask4_2">
+			      一周一件</label>
+				<label style="margin-left: 40px;">
+			      <input required="true" type="radio" name="ask4" value="0" id="ask4_3">
+			      我没有快递</label>
+		    </p>
+			</p>
+			<p>第五问：请问你平均每周会买多少瓶饮料？<span class="asterisk" >*</span><br>
+				<p>
+			    <label style="margin-left: 40px;">
+			      <input required="true" type="radio" name="ask5" value="7" id="ask5_0">
+			      一天两瓶</label>
+			    <label style="margin-left: 40px;">
+			      <input required="true" type="radio" name="ask5" value="3" id="ask5_1">
+			      两天一瓶</label>
+			    <br>
+			    <label style="margin-left: 40px;">
+			      <input required="true" type="radio" name="ask5" value="1" id="ask5_2">
+			      一周一瓶</label>
+				<label style="margin-left: 40px;">
+			      <input required="true" type="radio" name="ask5" value="0" id="ask5_3">
+			      我不喝饮料</label>
+		    	</p>
+				</p>
+			<p>第六问：请问你是几年级的学生？<span class="asterisk" >*</span><br>
+					<p>
+					<label style="margin-left: 40px;">
+					  <input required="true" type="radio" name="ask6" value="1" id="ask6_0">
+					  初一</label>
+					<label style="margin-left: 40px;">
+					  <input required="true" type="radio" name="ask6" value="2" id="ask6_1">
+					  初二</label>
+					<label style="margin-left: 40px;">
+					  <input required="true" type="radio" name="ask6" value="3" id="ask6_2">
+					  初三</label>
+					<br>
+					<label style="margin-left: 40px;">
+					  <input required="true" type="radio" name="ask6" value="4" id="ask6_3">
+					  高一</label>
+					<label style="margin-left: 40px;">
+					  <input required="true" type="radio" name="ask6" value="5" id="ask6_4">
+					  高二</label>
+					<label style="margin-left: 40px;">
+					  <input required="true" type="radio" name="ask6" value="6" id="ask6_5">
+					  高三</label>
+				</p>
+				</p>
+			<p>第七问：请问你现在多久用一只笔呢？<span class="asterisk" >*</span><br>
+				<p>
+					<label style="margin-left: 40px;">
+					  <input required="true" type="radio" name="ask7" value="3" id="ask7_0">
+					  三天一只</label>
+					<label style="margin-left: 40px;">
+					  <input required="true" type="radio" name="ask7" value="7" id="ask7_1">
+					  一周一只</label>
+					<br>
+					<label style="margin-left: 40px;">
+					  <input required="true" type="radio" name="ask7" value="14" id="ask7_2">
+					  两周一只</label>
+					<label style="margin-left: 40px;">
+					  <input required="true" type="radio" name="ask7" value="30" id="ask7_3">
+					  一月一只</label>
+				</p>
+				</p>
+			<p>第八问：请问你是走读生吗？<span class="asterisk" >*</span><br>
+					<p>
+						<label style="margin-left: 40px;">
+						  <input required="true" type="radio" name="ask8" value="3" id="ask8_0">
+						  是</label>
+						<label style="margin-left: 40px;">
+						  <input required="true" type="radio" name="ask8" value="7" id="ask8_1">
+						  否</label>
+						
+					</p>
+				</p>
+			<p>第九问：请问从家到学校的距离大概有多远？<span class="asterisk" >*</span><br>
+					<p>
+						<label style="margin-left: 40px;">
+						  <input required="true" type="radio" name="ask9" value="5" id="ask9_0">
+						  1km-10km</label>
+						<label style="margin-left: 40px;">
+						  <input required="true" type="radio" name="ask9" value="15" id="ask9_1">
+						  10km-20km</label>
+						<br>
+						<label style="margin-left: 40px;">
+						  <input required="true" type="radio" name="ask9" value="25" id="ask9_2">
+						  20km-30km</label>
+						<label style="margin-left: 40px;">
+						  <input required="true" type="radio" name="ask9" value="40" id="ask9_3">
+						  30km-50km</label>
+					</p>
+			</p>
+			<p>第十问：请问你平时都是怎样到校的呢？<span class="asterisk" >*</span><br>
+					<p>
+						<label style="margin-left: 40px;">
+						  <input required="true" type="radio" name="ask10" value="1" id="ask10_0">
+						  步行或骑自行车</label>
+						<label style="margin-left: 40px;">
+						  <input required="true" type="radio" name="ask10" value="2" id="ask10_1">
+						  乘坐公交车</label>
+						<label style="margin-left: 40px;">
+						  <input required="true" type="radio" name="ask10" value="3" id="ask10_2">
+						  乘坐地铁</label>
+						<br>
+						<label style="margin-left: 40px;">
+						  <input required="true" type="radio" name="ask10" value="4" id="ask10_3">
+						  乘坐电动车</label>
+						<label style="margin-left: 40px;">
+						  <input required="true" type="radio" name="ask10" value="5" id="ask10_4">
+						  乘坐私家车</label>
+					</p>
+			</p>
+			</form>
+	  		</div>
+		</div>
+		<div class="button button-action button-rounded main_submit" id="submit">
+			提交
+		</div>
+		<div id="foot" class="foot">脚注</div>
+	</div>
+</body>
+</html>

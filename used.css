@@ -1,0 +1,51 @@
+/* CSS Document */
+.header{
+	color: aqua;
+	text-align: center;	
+}
+.main{
+	background: #FFFFFF;
+	box-shadow: 0 1px 5px 0 rgb(0 0 0 / 5%);
+	border-radius: 2px;
+}
+.main_top{
+	margin: 20px 10px 10px 5px;
+	font-size: 24px;
+}
+.main_contest{
+	margin: 15px 20px 20px 15px;
+	font-size: 16px;
+}
+.main_submit{
+	color: aqua;
+}
+body{
+	background-color: chartreuse;
+}
+.all{
+	background-color: aliceblue;
+	max-width: 700px;
+	margin: auto;
+	border-radius: 10px;
+}
+.foot{
+	text-align: right;
+	font-size: 14px;
+	margin: 5px;
+	
+}
+p{
+	text-align: left;
+	margin: 10px;
+}
+.asterisk
+{
+	color:#ff6d56;
+	margin-left:5px;
+	font-size:.12rem;
+	vertical-align:top
+}
+.inputtext
+{
+	width: 100px;
+}
