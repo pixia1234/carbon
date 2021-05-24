@@ -23,25 +23,30 @@ contact: qq:2253982911
 			这是一个碳足迹计算器的主页面……
 		</div>
 		<div class="main_contest" id="contest">
-		  <form onSubmit="return calculate();">
+		  <form id="mainask">
 			<p>
-				第一问：你一个月大约用多少草稿纸？（换算成A4纸）<span class="asterisk" >*</span>
-			  <input required="true" type="number" name="ask1" id="ask1" placeholder="100" min= "0" class="inputtext">（张）
-				</p> 
-			<p> 第二问：你的考试频率大约为？（按一套试卷为一次）<span class="asterisk" >*</span></p>
+				第一问：草稿纸是生草的圣地——一周你会在多少草稿纸上涂抹内卷的血与泪呢？（换算成A4纸）<span class="asterisk" >*</span>
+			  <input required="true" type="number" name="ask1" id="ask1" min="0" class="inputtext" value="100" >（张）
+			</p> 
+			<p> 第二问：一学期你会多少次在考试的绝境包围圈里杀出一条血路呢？<span class="asterisk" >*</span></p>
 			<p>
-			    <label style="margin-left: 40px;">
-			      <input required="true" type="radio" name="ask2" value="14" id="ask2_0">
-			      一天一次</label>
-			    <label style="margin-left: 40px;">
-			      <input required="true" type="radio" name="ask2" value="6" id="ask2_1">
-			      一周三次</label>
+			    <label class="askmargin">
+			      <input required="true" type="radio" name="ask2" value="2" id="ask2_0">
+			      2次：侮辱性不大，伤害性极强 </label>
+				<br>
+			    <label class="askmargin">
+			      <input required="true" type="radio" name="ask2" value="3.5" id="ask2_1">
+			      3-4次：老师啊，你总是能给我们整出点新花样 </label>
 			    <br>
-			    <label style="margin-left: 40px;">
-			      <input required="true" type="radio" name="ask2" value="2" id="ask2_2">
-			      一周一次</label>
+			    <label class="askmargin">
+			      <input required="true" type="radio" name="ask2" value="6.5" id="ask2_2">
+			      5-8次：喂别考了我要糊了米娜桑 </label>
+				<br>
+				<label class="askmargin">
+			      <input required="true" type="radio" name="ask2" value="10.5" id="ask2_3">
+			      9-12次：毁灭吧赶紧的</label>
 		    </p>
-			<p>第三问：你做到了一下哪些绿色习惯呢？<span class="asterisk" >*</span><br>
+			<p>第三问：小小习惯，大大世界————你做到了以下哪些绿色习惯呢？<span class="asterisk" >*</span><br>
 			  <label>
 			    <input required="true" type="checkbox" name="ask3" value="1" id="ask3_0" style="margin-left: 40px;">
 			    使用节能灯泡</label>
@@ -63,132 +68,212 @@ contact: qq:2253982911
 			    使用太阳能热水器</label>
 			  <br>
             </p>
-			<p>第四问：请问平均每周会有多少件快递？<span class="asterisk" >*</span><br>
+			<p>第四问：一周你会产生多少快递呢？<span class="asterisk" >*</span><br>
 				<p>
-			    <label style="margin-left: 40px;">
+			    <label class="askmargin">
 			      <input required="true" type="radio" name="ask4" value="7" id="ask4_0">
-			      一天一件</label>
-			    <label style="margin-left: 40px;">
+			      一天一件：对外依赖性极强</label>
+					<br>
+			    <label class="askmargin">
 			      <input required="true" type="radio" name="ask4" value="3" id="ask4_1">
-			      一周三件</label>
-			    <br>
-			    <label style="margin-left: 40px;">
+			      一周三件：快递虽少五脏俱全</label>
+					<br>
+			    <label class="askmargin">
 			      <input required="true" type="radio" name="ask4" value="1" id="ask4_2">
-			      一周一件</label>
-				<label style="margin-left: 40px;">
+			      一周一件：不感冒</label>
+					<br>
+				<label class="askmargin">
 			      <input required="true" type="radio" name="ask4" value="0" id="ask4_3">
-			      我没有快递</label>
+			      没有快递：反对消费主义从我做起  </label>
 		    </p>
 			</p>
-			<p>第五问：请问你平均每周会买多少瓶饮料？<span class="asterisk" >*</span><br>
+			<p>第五问：肥宅快乐水——你一周会买多少瓶饮料呢？<span class="asterisk" >*</span><br>
 				<p>
-			    <label style="margin-left: 40px;">
+			    <label class="askmargin">
 			      <input required="true" type="radio" name="ask5" value="7" id="ask5_0">
-			      一天两瓶</label>
-			    <label style="margin-left: 40px;">
-			      <input required="true" type="radio" name="ask5" value="3" id="ask5_1">
-			      两天一瓶</label>
+			      一天两瓶：过量小命不保</label>
+					<br>
+			    <label class="askmargin">
+			      <input required="true" type="radio" name="ask5" value="3.5" id="ask5_1">
+			      两天一瓶：适量提神醒脑</label>
 			    <br>
-			    <label style="margin-left: 40px;">
+			    <label class="askmargin">
 			      <input required="true" type="radio" name="ask5" value="1" id="ask5_2">
-			      一周一瓶</label>
-				<label style="margin-left: 40px;">
+			      一周一瓶：少喝身体好好</label>
+					<br>
+				<label class="askmargin">
 			      <input required="true" type="radio" name="ask5" value="0" id="ask5_3">
-			      我不喝饮料</label>
+			      我不喝饮料：养老</label>
 		    	</p>
 				</p>
-			<p>第六问：请问你是几年级的学生？<span class="asterisk" >*</span><br>
+			<p>第六问：恕我冒昧，请问你的年级是？<span class="asterisk" >*</span><br>
 					<p>
-					<label style="margin-left: 40px;">
+					<label class="askmargin">
 					  <input required="true" type="radio" name="ask6" value="1" id="ask6_0">
-					  初一</label>
-					<label style="margin-left: 40px;">
+					  初一：新来乍到，初体验了社会的险恶</label>
+						<br>
+					<label class="askmargin">
 					  <input required="true" type="radio" name="ask6" value="2" id="ask6_1">
-					  初二</label>
-					<label style="margin-left: 40px;">
+					  初二：啊嘞怎么初中内容学差不多了</label>
+						<br>
+					<label class="askmargin">
 					  <input required="true" type="radio" name="ask6" value="3" id="ask6_2">
-					  初三</label>
+					  初三：我爱中考</label>
 					<br>
-					<label style="margin-left: 40px;">
+					<label class="askmargin">
 					  <input required="true" type="radio" name="ask6" value="4" id="ask6_3">
-					  高一</label>
-					<label style="margin-left: 40px;">
+					  高一：数理化：we’re free</label>
+						<br>
+					<label class="askmargin">
 					  <input required="true" type="radio" name="ask6" value="5" id="ask6_4">
-					  高二</label>
-					<label style="margin-left: 40px;">
+					  高二：作业已加入肯德基豪华套餐</label>
+						<br>
+					<label class="askmargin">
 					  <input required="true" type="radio" name="ask6" value="6" id="ask6_5">
-					  高三</label>
+					  高三：苟非吾之所有，虽一毫而莫取</label>
 				</p>
 				</p>
-			<p>第七问：请问你现在多久用一只笔呢？<span class="asterisk" >*</span><br>
+			<p>第七问：笔是你的枪：一周有多少支笔在你的手中完成了它的使命呢？（包括中性笔，铅笔，签字笔，记号笔和圆珠笔等）<span class="asterisk" >*</span><br>
 				<p>
-					<label style="margin-left: 40px;">
-					  <input required="true" type="radio" name="ask7" value="3" id="ask7_0">
-					  三天一只</label>
-					<label style="margin-left: 40px;">
-					  <input required="true" type="radio" name="ask7" value="7" id="ask7_1">
-					  一周一只</label>
+					<label class="askmargin">
+					  <input required="true" type="radio" name="ask7" value="10" id="ask7_0">
+					  三天一支：我家是批发笔的</label>
 					<br>
-					<label style="margin-left: 40px;">
-					  <input required="true" type="radio" name="ask7" value="14" id="ask7_2">
-					  两周一只</label>
-					<label style="margin-left: 40px;">
-					  <input required="true" type="radio" name="ask7" value="30" id="ask7_3">
-					  一月一只</label>
+					<label class="askmargin">
+					  <input required="true" type="radio" name="ask7" value="4" id="ask7_1">
+					  一周一支：努力必有收获</label>
+					<br>
+					<label class="askmargin">
+					  <input required="true" type="radio" name="ask7" value="2" id="ask7_2">
+					  两周一支：比偶像还专心——毕竟是我的命根子</label>
+					<br>
+					<label class="askmargin">
+					  <input required="true" type="radio" name="ask7" value="1" id="ask7_3">
+					  一月一支：意识流学生</label>
 				</p>
 				</p>
-			<p>第八问：请问你是走读生吗？<span class="asterisk" >*</span><br>
+				<p>第八问：你是快乐的走读生吗~<span class="asterisk" >*</span><br>
 					<p>
-						<label style="margin-left: 40px;">
+						<label class="askmargin">
 						  <input required="true" type="radio" name="ask8" value="3" id="ask8_0">
 						  是</label>
-						<label style="margin-left: 40px;">
+						<label class="askmargin">
 						  <input required="true" type="radio" name="ask8" value="7" id="ask8_1">
 						  否</label>
 						
 					</p>
 				</p>
-			<p>第九问：请问从家到学校的距离大概有多远？<span class="asterisk" >*</span><br>
+			<p>第九问：从家到学校的距离大概有多远呢？<span class="asterisk" >*</span><br>
 					<p>
-						<label style="margin-left: 40px;">
+						<label class="askmargin">
 						  <input required="true" type="radio" name="ask9" value="5" id="ask9_0">
-						  1km-10km</label>
-						<label style="margin-left: 40px;">
-						  <input required="true" type="radio" name="ask9" value="15" id="ask9_1">
-						  10km-20km</label>
+						  1km-10km：一步到位</label>
 						<br>
-						<label style="margin-left: 40px;">
+						<label class="askmargin">
+						  <input required="true" type="radio" name="ask9" value="15" id="ask9_1">
+						  10km-20km：走走总会到的</label>
+						<br>
+						<label class="askmargin">
 						  <input required="true" type="radio" name="ask9" value="25" id="ask9_2">
-						  20km-30km</label>
-						<label style="margin-left: 40px;">
+						  20km-30km：坐车——起飞</label>
+						<br>
+						<label class="askmargin">
 						  <input required="true" type="radio" name="ask9" value="40" id="ask9_3">
-						  30km-50km</label>
+						  30km-50km：到校一般比同班人早一大截</label>
 					</p>
 			</p>
 			<p>第十问：请问你平时都是怎样到校的呢？<span class="asterisk" >*</span><br>
 					<p>
-						<label style="margin-left: 40px;">
+						<label class="askmargin">
 						  <input required="true" type="radio" name="ask10" value="1" id="ask10_0">
-						  步行或骑自行车</label>
-						<label style="margin-left: 40px;">
-						  <input required="true" type="radio" name="ask10" value="2" id="ask10_1">
-						  乘坐公交车</label>
-						<label style="margin-left: 40px;">
-						  <input required="true" type="radio" name="ask10" value="3" id="ask10_2">
-						  乘坐地铁</label>
+						  步行或骑自行车：11路公交</label>
 						<br>
-						<label style="margin-left: 40px;">
+						<label class="askmargin">
+						  <input required="true" type="radio" name="ask10" value="2" id="ask10_1">
+						  乘坐公交车：挤  </label>
+						<br>
+						<label class="askmargin">
+						  <input required="true" type="radio" name="ask10" value="3" id="ask10_2">
+						  乘坐地铁：挤*2</label>
+						<br>
+						<label class="askmargin">
 						  <input required="true" type="radio" name="ask10" value="4" id="ask10_3">
-						  乘坐电动车</label>
-						<label style="margin-left: 40px;">
+						  乘坐电动车：逮虾户  </label>
+						<br>
+						<label class="askmargin">
 						  <input required="true" type="radio" name="ask10" value="5" id="ask10_4">
-						  乘坐私家车</label>
+						  乘坐私家车：上流  </label>
+					</p>
+			</p>
+            <p>第十一问：一个季节你一般会选择入手几套新服装呢？<span class="asterisk" >*</span><br>
+					<p>
+						<label class="askmargin">
+						  <input required="true" type="radio" name="ask11" value="0" id="ask11_0">
+						  0:               </label>
+						<br>
+						<label class="askmargin">
+						  <input required="true" type="radio" name="ask11" value="1.5" id="ask11_1">
+						  1-2身：生活之所必需</label>
+						<br>
+						<label class="askmargin">
+						  <input required="true" type="radio" name="ask11" value="4" id="ask11_2">
+						  3-5身：个性       </label>
+						<br>
+						<label class="askmargin">
+						  <input required="true" type="radio" name="ask11" value="7" id="ask11_3">
+						  6-8身：明天穿什么好呢 </label>
+					</p>
+			</p>
+			<p>第十二问：作业者，万恶之源也——作业可真是烦躁呢~每天你会淹没在多大规模的作业钢铁洪流之中呢？<span class="asterisk" >*</span>
+					<p>
+						<label class="askmargin">
+						  <input required="true" type="radio" name="ask12" value="1.5" id="ask12_0">
+						  莫得压力，三页以下</label>
+						<br>
+						<label class="askmargin">
+						  <input required="true" type="radio" name="ask12" value="4" id="ask12_1">
+						  还行叭，三页到五页之间 </label>
+						<br>
+						<label class="askmargin">
+						  <input required="true" type="radio" name="ask12" value="6.5" id="ask12_2">
+						  不大轻松，五页到八页之间</label>
+						<br>
+						<label class="askmargin">
+						  <input required="true" type="radio" name="ask12" value="10.5" id="ask12_3">
+						  我受不了啦，九页到十二页之间 </label>
+						<br>
+						<label class="askmargin">
+						  <input required="true" type="radio" name="ask12" value="12" id="ask12_4">
+						  如果我活着，请对我的老婆说：我爱学习——十二页以上 </label>
+						<br>
+						<label class="askmargin">
+						  <input required="true" type="radio" name="ask12" value="0" id="ask12_5">
+						  正经人谁写作业啊，不可能的，这辈子都不可能的 </label>
+					</p>
+			</p>
+			<p>第十三问：草稿纸是生草的圣地——一周你会在多少草稿纸上涂抹内卷的血与泪呢？<span class="asterisk" >*</span><br>
+					<p>
+						<label class="askmargin">
+						  <input required="true" type="radio" name="ask13" value="0" id="ask13_0">
+						  0张：试卷是我家，草稿乱涂靠大家 </label>
+						<br>
+						<label class="askmargin">
+						  <input required="true" type="radio" name="ask13" value="2" id="ask13_1">
+						  2张：心算yyds  </label>
+						<br>
+						<label class="askmargin">
+						  <input required="true" type="radio" name="ask13" value="5" id="ask13_2">
+						  5张：琴棋书画随心所欲（欸不对 </label>
+						<br>
+						<label class="askmargin">
+						  <input required="true" type="radio" name="ask13" value="8" id="ask13_3">
+						  8张及以上：草稿纸是个好东西，可惜让你变成了垃圾</label>
 					</p>
 			</p>
 			</form>
 	  		</div>
 		</div>
-		<div class="button button-action button-rounded main_submit" id="submit">
+		<div class="button button-action button-rounded main_submit" id="submit" onClick="calculate();">
 			提交
 		</div>
 		<div id="foot" class="foot">脚注</div>

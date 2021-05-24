@@ -43,9 +43,14 @@ p{
 	color:#ff6d56;
 	margin-left:5px;
 	font-size:.12rem;
-	vertical-align:top
+	vertical-align:top;
 }
 .inputtext
 {
 	width: 100px;
+}
+.askmargin{
+	margin-left: 40px;
+	margin-top: 20px;
+	margin-right: 40px;
 }
